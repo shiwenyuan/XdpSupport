@@ -1,0 +1,15 @@
+{
+    "name": "shiwenyuan/xdp-support",
+    "authors": [
+        {
+            "name": "北行10000",
+            "email": "13341007105@163.com"
+        }
+    ],
+    "require": {},
+    "autoload":{
+        "psr-4":{
+            "XdpSupport\\":"src/"
+        }
+    }
+}
