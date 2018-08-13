@@ -6,15 +6,29 @@
  * Time: 下午1:28
  */
 
-require_once __DIR__."/../vendor/autoload.php";
+require_once __DIR__ . "/../vendor/autoload.php";
 
 use XdpSupport\Arr;
-$ary = [
-    'name' => 'zhangsan',
-    'pwd' => 'asdf234'
-];
+use XdpSupport\Traits\Rountine;
 
-var_dump(Arr::set($ary, 'port', 3306));
+function testRountine()
+{
 
-var_dump(Arr::get($ary,'port'));
-var_dump(Arr::has($ary, ['port','pwsd']));
+    echo Rountine::debug(['name'=>'zhangsan','age'=>18]);
+    echo Rountine::debug('zhangsan');
+}
+
+function testAry()
+{
+    $ary = [
+        'name' => 'zhangsan',
+        'pwd' => 'asdf234'
+    ];
+
+    var_dump(Arr::set($ary, 'port', 3306));
+    var_dump(Arr::get($ary, 'port'));
+    var_dump(Arr::has($ary, ['port', 'pwsd']));
+}
+
+testAry();
+testRountine();
